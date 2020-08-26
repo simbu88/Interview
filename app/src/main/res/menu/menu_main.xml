@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.kroslinks.itunealbumsearch.MainActivity">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Search"
+        app:showAsAction="always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+
+    <item
+        android:id="@+id/addcart"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        android:title="AddCart"
+        app:showAsAction="always"
+        />
+</menu>
