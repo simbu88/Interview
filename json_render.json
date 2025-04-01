@@ -1,0 +1,127 @@
+{
+    "type": "form",
+    "title": "New Post",
+    "children": [
+      {
+        "type": "dropdown",
+        "name": "catalogue",
+        "label": "Select Catalogue",
+        "options": [
+          {
+            "value": "catalogue1",
+            "label": "Catalogue 1"
+          },
+          {
+            "value": "catalogue2",
+            "label": "Catalogue 2"
+          },
+          {
+            "value": "catalogue3",
+            "label": "Catalogue 3"
+          }
+        ],
+        "validators": [
+          {
+            "type": "required",
+            "message": "Catalogue selection is required"
+          }
+        ]
+      },
+      {
+        "type": "dropdown",
+        "name": "postTo",
+        "label": "Post To",
+        "options": [
+          {
+            "value": "public",
+            "label": "Public (All)"
+          },
+          {
+            "value": "private",
+            "label": "Private (Selected)"
+          }
+        ],
+        "validators": [
+          {
+            "type": "required",
+            "message": "Post visibility selection is required"
+          }
+        ]
+      },
+      {
+        "type": "toggleButton",
+        "name": "transactionType",
+        "label": "I want to",
+        "options": [
+          {
+            "value": "sell",
+            "label": "Sell"
+          },
+          {
+            "value": "purchase",
+            "label": "Purchase"
+          }
+        ],
+        "default": "sell"
+      },
+      {
+        "type": "toggleButton",
+        "name": "contractType",
+        "label": "Type of Contract",
+        "options": [
+          {
+            "value": "spot",
+            "label": "Spot"
+          },
+          {
+            "value": "term",
+            "label": "Term"
+          }
+        ],
+        "default": "spot"
+      },
+      {
+        "type": "radioGroup",
+        "name": "selectionType",
+        "label": "Select Method",
+        "options": [
+          {
+            "value": "selectProducts",
+            "label": "Select Products"
+          },
+          {
+            "value": "bulkUpload",
+            "label": "Bulk Upload (.xls)"
+          },
+          {
+            "value": "selectPricing",
+            "label": "Select Pricing"
+          },
+          {
+            "value": "selectDelivery",
+            "label": "Select Delivery"
+          }
+        ]
+      },
+      {
+        "type": "fileUpload",
+        "name": "bulkUpload",
+        "label": "Upload File",
+        "fileType": "xls",
+        "visible": false,
+        "condition": {
+          "field": "selectionType",
+          "value": "bulkUpload"
+        }
+      },
+      {
+        "type": "button",
+        "label": "Preview Post",
+        "action": "submit",
+        "style": {
+          "backgroundColor": "#F1F1F1",
+          "textColor": "#000000"
+        }
+      }
+    ]
+  }
